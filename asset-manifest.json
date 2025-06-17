@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/farren/static/css/main.ccdf6adf.css",
-    "main.js": "/farren/static/js/main.5131c3fb.js",
+    "main.css": "/farren/static/css/main.bb4437e5.css",
+    "main.js": "/farren/static/js/main.7af63ac8.js",
+    "static/media/HeroImage.jpg": "/farren/static/media/HeroImage.875bf5e8ffb3da633fbd.jpg",
+    "static/media/Para.jpg": "/farren/static/media/Para.0458ac479852dfe77c40.jpg",
     "index.html": "/farren/index.html",
-    "main.ccdf6adf.css.map": "/farren/static/css/main.ccdf6adf.css.map",
-    "main.5131c3fb.js.map": "/farren/static/js/main.5131c3fb.js.map"
+    "main.bb4437e5.css.map": "/farren/static/css/main.bb4437e5.css.map",
+    "main.7af63ac8.js.map": "/farren/static/js/main.7af63ac8.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccdf6adf.css",
-    "static/js/main.5131c3fb.js"
+    "static/css/main.bb4437e5.css",
+    "static/js/main.7af63ac8.js"
   ]
 }
