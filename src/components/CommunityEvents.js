@@ -35,7 +35,7 @@ function CommunityEvents() {
                   {event.description}
                 </Typography>
               </CardContent>
-              <CardActions sx={{ borderTop: '1px solid #eee', justifyContent: 'flex-end', p: 2 }}>
+              <CardActions sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', justifyContent: 'flex-end', p: 2 }}>
                 <Button variant="contained" href={event.link} target="_blank" sx={{ bgcolor: 'primary.main', color: 'white' }}>
                   Go to Instagram
                 </Button>

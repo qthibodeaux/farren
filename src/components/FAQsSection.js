@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ParallaxImage from '../assets/Para.jpg'
 
 const faqs = [
   {
@@ -50,6 +51,7 @@ function FAQsSection() {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
+        backgroundImage: `url(${ParallaxImage})`,
         py: 8, // Add padding for content spacing
         overflow: 'hidden',
       }}

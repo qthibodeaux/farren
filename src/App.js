@@ -1,6 +1,4 @@
-import React from 'react';
 import { Box, Container, Divider } from '@mui/material';
-import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CollectionList from './components/CollectionList';
@@ -19,13 +17,12 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Box>
-      <Header />
       <Navbar />
 
       <main>
         <Hero />
-        <Divider sx={{ my: 5 }} />
-        <Container maxWidth="lg">
+        <Divider sx={{ my: 2 }} />
+        <Container maxWidth="xl"> {/* Changed from "lg" to "xl" */}
           <CollectionList />
           <Divider sx={{ my: 5 }} />
           <AllProducts />
@@ -35,19 +32,19 @@ function App() {
         </Container>
         <PersonalizationBanner />
         <Divider sx={{ my: 5 }} />
-        <Container maxWidth="lg">
+        <Container maxWidth="xl"> {/* Changed from "lg" to "xl" */}
           <SocialMediaSection />
           <Divider sx={{ my: 5 }} />
         </Container>
         <NewsletterBanner />
         <Divider sx={{ my: 5 }} />
-        <Container maxWidth="lg">
+        <Container maxWidth="xl"> {/* Changed from "lg" to "xl" */}
           <CommunityEvents />
           <Divider sx={{ my: 5 }} />
         </Container>
         <FAQsSection /> {/* This component includes its own container/background */}
         <Divider sx={{ my: 5 }} />
-        <Container maxWidth="lg">
+        <Container maxWidth="xl"> {/* Changed from "lg" to "xl" */}
           <WhyFarrenServices />
           <Divider sx={{ my: 5 }} />
           <ContactUs />

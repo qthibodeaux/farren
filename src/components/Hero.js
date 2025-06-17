@@ -1,13 +1,14 @@
-import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import backgroundImage from '../assets/HeroImage.jpg'
 
 function Hero() {
+  
   return (
     <Box
       sx={{
         position: 'relative',
         height: { xs: 300, sm: 400, md: 500 },
-        backgroundImage: 'url("https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80")',
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
@@ -22,9 +23,9 @@ function Hero() {
       <Box
         sx={{
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          padding: { xs: 3, md: 5 },
+          padding: { xs: 10, md: 5 },
           borderRadius: '8px',
-          maxWidth: '80%',
+          maxWidth: '100%',
         }}
       >
         <Typography

@@ -1,29 +1,68 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', "Roboto", "Helvetica", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f5f5; /* Match MUI background default */
-  color: #333;
+  background-color: #121212; /* Dark Grey: theme.palette.background.default */
+  color: #E0E0E0; /* Off-white: theme.palette.text.primary */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Parallax specific styles */
+/* Parallax specific styles (no change here, but ensuring it integrates) */
 .parallax-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWM5NG5kbzgwN3ZtNWV6NXE2bDNpZW5vd2d4MW9nb250azRjZzRnbSZlcD12MV9pbnRlcm5hbF9naWYmY3Q9Zw/kFIfuwjQ9sE7r1sM4g/giphy.gif'); /* Animated embroidery GIF */
-  background-attachment: fixed; /* This makes it parallax */
+  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWM5NG5kbzgwN3ZtNWV6NXE2bDNpZW5vd2d4MW9nb250azRjZzRnbSZlcD12MV9pbnRlcm5hbF9naWYmY3Q9Zw/kFIfuwjQ9sE7r1sM4g/giphy.gif');
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  filter: brightness(60%); /* Darken the background for readability */
+  filter: brightness(60%);
 }
+
+.personalization-icon-circle {
+  position: relative;
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle initial border */
+  overflow: hidden; /* Important for the fill effect */
+  transition: border-color 0.3s ease; /* Smooth transition for non-active border */
+}
+
+.personalization-icon-circle.active {
+  border: 2px solid transparent; /* Hide the static border when active */
+  animation: none; /* Reset animation if any from non-active state */
+}
+
+.personalization-icon-circle.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box; /* Include padding/border in element's total width/height */
+  /* This creates the animated border using a conic gradient */
+  background: conic-gradient(from 0deg, var(--active-border-color) 0%, var(--active-border-color) 0%, transparent 0%);
+  mask: radial-gradient(white calc(100% - 2px), transparent calc(100% - 2px + 1px)); /* Creates the inner hole */
+  -webkit-mask: radial-gradient(white calc(100% - 2px), transparent calc(100% - 2px + 1px));
+  animation: fillCircleBorder 7s linear forwards; /* 7 seconds to fill */
+}
+
+@keyframes fillCircleBorder {
+  from {
+    background: conic-gradient(from 0deg, var(--active-border-color) 0%, var(--active-border-color) 0%, transparent 0%);
+  }
+  to {
+    background: conic-gradient(from 0deg, var(--active-border-color) 0%, var(--active-border-color) 100%, transparent 100%);
+  }
+}
+
